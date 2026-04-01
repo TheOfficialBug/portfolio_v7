@@ -1,0 +1,576 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal Suresh | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #8b5cf6; 
+        }
+
+        /* Word Animation */
+        .word-animate-container span {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(1.5rem);
+            animation: slideUpWord 0.8s ease-out forwards;
+        }
+
+        @keyframes slideUpWord {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Chat Animations */
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .chat-message-animate {
+            animation: fadeInMessage 0.3s ease-out forwards;
+        }
+
+        /* Typing Dots */
+        .typing-dot {
+            animation: typingDot 1.4s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        
+        @keyframes typingDot {
+            0%, 80%, 100% { transform: scale(0); opacity: 0.5; }
+            40% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-['Inter',sans-serif] antialiased w-full h-screen overflow-hidden flex items-center justify-center p-4 md:p-8 selection:bg-violet-500 selection:text-white bg-zinc-900 text-zinc-300">
+
+    <!-- Background Elements -->
+    <div class="fixed inset-0 z-0 pointer-events-none opacity-20" style="background-image: radial-gradient(circle at 50% 0%, #8b5cf6 0%, transparent 50%);"></div>
+
+    <!-- Main Card Container -->
+    <div class="relative w-full max-w-7xl h-full max-h-[92vh] backdrop-blur-2xl border rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row z-10 bg-zinc-900/40 border-zinc-800">
+        
+        <!-- Left Sidebar / Header -->
+        <aside class="w-full md:w-2/5 lg:w-1/3 bg-white/[0.01] border-b md:border-b-0 md:border-r p-8 md:p-12 flex flex-col justify-between overflow-y-auto md:overflow-visible border-zinc-800 shrink-0">
+            <div>
+                <h1 class="text-5xl md:text-6xl font-normal tracking-tight mb-4 font-['Geist',sans-serif] animate-words text-zinc-100">Kunal Suresh</h1>
+                <h2 class="text-2xl font-normal tracking-tight text-violet-500 mb-6 font-['Geist',sans-serif] animate-words">Software Engineer</h2>
+                <p class="text-sm leading-relaxed mb-10 font-light text-zinc-400">
+                    Specializing in Python, C#, and Unity3D. Building immersive VR simulations, scalable data pipelines, and robust machine learning systems.
+                </p>
+
+                <!-- Contact Info -->
+                <div class="space-y-4 mb-10">
+                    <a href="mailto:kunalsuresh25@gmail.com" class="flex items-center gap-3 text-sm hover:text-violet-500 transition-colors group text-zinc-400">
+                        <div class="w-8 h-8 rounded-full border flex items-center justify-center group-hover:border-violet-500/50 transition-colors border-zinc-800 bg-zinc-900/50">
+                            <iconify-icon icon="solar:letter-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        </div>
+                        kunalsuresh25@gmail.com
+                    </a>
+                    <a href="tel:+14158156904" class="flex items-center gap-3 text-sm hover:text-violet-500 transition-colors group text-zinc-400">
+                        <div class="w-8 h-8 rounded-full border flex items-center justify-center group-hover:border-violet-500/50 transition-colors border-zinc-800 bg-zinc-900/50">
+                            <iconify-icon icon="solar:phone-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        </div>
+                        (+1) 415 815 6904
+                    </a>
+                    <div class="flex items-center gap-3 text-sm text-zinc-400 cursor-default">
+                        <div class="w-8 h-8 rounded-full border flex items-center justify-center border-zinc-800 bg-zinc-900/50">
+                            <iconify-icon icon="solar:map-point-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                        </div>
+                        Iowa State University, USA
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="flex gap-3">
+                    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border hover:bg-violet-500 hover:border-violet-500 transition-all bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:text-white">
+                        <iconify-icon icon="solar:link-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    </a>
+                    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border hover:bg-violet-500 hover:border-violet-500 transition-all bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:text-white">
+                        <iconify-icon icon="solar:code-circle-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    </a>
+                    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border hover:bg-violet-500 hover:border-violet-500 transition-all bg-zinc-800/50 border-zinc-700 text-zinc-300 hover:text-white">
+                        <iconify-icon icon="solar:document-text-linear" stroke-width="1.5" class="text-xl"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Content Area -->
+        <main class="w-full md:w-3/5 lg:w-2/3 h-full overflow-y-auto scroll-smooth p-8 md:p-12 lg:p-16 relative">
+            
+            <!-- AI Chat Interface -->
+            <section class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight mb-8 font-['Geist',sans-serif] text-zinc-100 flex items-center gap-3 animate-words">
+                    Ask AI
+                    <iconify-icon icon="solar:magic-stick-3-linear" class="text-violet-500"></iconify-icon>
+                </h3>
+                <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 shadow-sm overflow-hidden flex flex-col max-w-3xl transition-all duration-300 hover:border-zinc-700">
+                    <!-- Chat Window -->
+                    <div id="chat-window" class="h-72 overflow-y-auto p-4 md:p-6 flex flex-col gap-6">
+                        <!-- Initial AI Message -->
+                        <div class="flex w-full gap-3 md:gap-4 chat-message-animate">
+                            <div class="w-8 h-8 rounded-full border border-violet-500/30 bg-violet-500/10 flex items-center justify-center shrink-0">
+                                <iconify-icon icon="solar:smart-speaker-minimalistic-linear" class="text-violet-400"></iconify-icon>
+                            </div>
+                            <div class="flex flex-col gap-1 w-full max-w-[85%]">
+                                <span class="text-xs font-medium text-zinc-500">AI Assistant</span>
+                                <p class="text-sm text-zinc-300 leading-relaxed">Hi! I'm an AI trained on Kunal's portfolio. You can ask me about his education, experience, projects, or skills. How can I help?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Chat Input -->
+                    <div class="border-t border-zinc-800 p-3 md:p-4 bg-zinc-900/50 relative">
+                        <form id="chat-form" class="relative flex items-end gap-2 bg-zinc-800/40 border border-zinc-700/50 rounded-xl transition-colors focus-within:border-violet-500/50 focus-within:bg-zinc-800/60 p-1 pl-3">
+                            <textarea id="chat-input" rows="1" class="w-full bg-transparent py-2.5 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none resize-none max-h-32" placeholder="Ask about experience, skills, projects..."></textarea>
+                            <button type="submit" id="chat-submit" class="p-2.5 mb-0.5 rounded-lg text-zinc-400 hover:text-zinc-100 hover:bg-zinc-700/50 transition-all disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-zinc-400 shrink-0 flex items-center justify-center" disabled="">
+                                <iconify-icon icon="solar:plain-2-linear" stroke-width="1.5" class="text-lg"></iconify-icon>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight font-['Geist',sans-serif] mb-8 text-zinc-100 animate-words">Education</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 border rounded-2xl transition-all border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800/40 hover:border-zinc-700">
+                        <h4 class="text-base font-medium mb-1 text-zinc-100">Iowa State University 2026</h4>
+                        <p class="text-sm mb-3 font-light text-violet-400">Master of Science, Computer Science</p>
+                        <p class="text-xs text-zinc-500 mt-auto font-light">Current</p>
+                    </div>
+                    <div class="p-6 border rounded-2xl transition-all border-zinc-800 bg-zinc-900/40 hover:bg-zinc-800/40 hover:border-zinc-700">
+                        <h4 class="text-base font-medium mb-1 text-zinc-100">Vidyavardhaka College</h4>
+                        <p class="text-sm mb-3 font-light text-violet-400">Bachelor of Engineering, CSE</p>
+                        <p class="text-xs text-zinc-500 mt-auto font-light">GPA 3.7 | June 2023</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight mb-8 font-['Geist',sans-serif] text-zinc-100 animate-words">Work Experience</h3>
+                
+                <div class="space-y-0">
+                    <div class="group relative pl-8 border-l pb-10 last:pb-0 border-zinc-800">
+                        <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full group-hover:bg-violet-500 transition-colors bg-zinc-800"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h4 class="text-base font-medium group-hover:text-violet-400 transition-colors text-zinc-100">Graduate Research Assistant</h4>
+                            <span class="text-xs text-zinc-500 font-light mt-1 sm:mt-0">Nov 2024 - Present</span>
+                        </div>
+                        <h5 class="text-sm font-light mb-3 text-zinc-400">Iowa State University <span class="mx-2 text-zinc-600">|</span> Python, BioPython, Bash</h5>
+                        <p class="text-sm leading-relaxed font-light text-zinc-400">Built an automated Python/BioPython pipeline to identify Genomic Safe Harbors (GSH) in Zebrafish genome, integrating data from Ensembl, COSMIC, and UCSC databases; screened 250K+ loci to flag 42 safe harbor sites, reducing manual curation from 2 months to 45 minutes.</p>
+                    </div>
+
+                    <div class="group relative pl-8 border-l pb-10 last:pb-0 border-zinc-800">
+                        <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full group-hover:bg-violet-500 transition-colors bg-zinc-800"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h4 class="text-base font-medium group-hover:text-violet-400 transition-colors text-zinc-100">Software Development Engineer - 1</h4>
+                            <span class="text-xs text-zinc-500 font-light mt-1 sm:mt-0">Jun 2023 - Jul 2024</span>
+                        </div>
+                        <h5 class="text-sm font-light mb-3 text-zinc-400">HoloWorld <span class="mx-2 text-zinc-600">|</span> C#, Oculus SDK, Unity3D</h5>
+                        <p class="text-sm leading-relaxed mb-4 font-light text-zinc-400">Built VR simulations for FPV and submersible drones using Unity3D, C# &amp; Oculus SDK; deployed for DBSKKV University and Government of Maharashtra, enabling 300+ users to train in virtual environments and reducing real-world testing costs by 63%.</p>
+                        
+                        <div class="rounded-xl p-4 border bg-zinc-800/20 border-zinc-800/50">
+                            <h6 class="text-sm font-medium mb-2 text-zinc-300">SDE Intern - XR Developer</h6>
+                            <p class="text-sm leading-relaxed font-light text-zinc-400">Designed and developed a quadcopter VR experience in Unity3D with Oculus Meta Quest 2 integration, incorporating Input Systems for immersive controls; demoed to 10+ stakeholders, resulting in project adoption for educational pilots.</p>
+                        </div>
+                    </div>
+
+                    <div class="group relative pl-8 border-l pb-10 last:pb-0 border-zinc-800">
+                        <div class="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full group-hover:bg-violet-500 transition-colors bg-zinc-800"></div>
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-1">
+                            <h4 class="text-base font-medium group-hover:text-violet-400 transition-colors text-zinc-100">WebDev Intern</h4>
+                            <span class="text-xs text-zinc-500 font-light mt-1 sm:mt-0">Feb 2023 - Apr 2023</span>
+                        </div>
+                        <h5 class="text-sm font-light mb-3 text-zinc-400">Bridge Labs <span class="mx-2 text-zinc-600">|</span> Python, Django, Web</h5>
+                        <p class="text-sm leading-relaxed font-light text-zinc-400">Built a Django-based web application integrating Google Places/Maps APIs and web scraping (bs4, selenium) to aggregate hotel listings; processed 5,000+ listings daily, improving customer search efficiency by 30%.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight mb-8 font-['Geist',sans-serif] text-zinc-100 animate-words">Featured Projects</h3>
+                
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="p-6 border rounded-2xl hover:border-violet-500/30 transition-all group border-zinc-800 bg-zinc-900/40">
+                        <h4 class="text-base font-medium mb-3 group-hover:text-violet-400 transition-colors text-zinc-100">Formula 1 Telemetry Analysis</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">Python</span>
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">FastF1</span>
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">Seaborn</span>
+                        </div>
+                        <p class="text-sm leading-relaxed font-light text-zinc-400">Created an end-to-end data pipeline to extract, process, and visualize F1 race telemetry. Analyzed 2023-2024 seasons for 10 drivers, generating interactive charts that optimized race strategy insights and highlighted performance gaps up to 2 seconds per lap.</p>
+                    </div>
+
+                    <div class="p-6 border rounded-2xl hover:border-violet-500/30 transition-all group border-zinc-800 bg-zinc-900/40">
+                        <h4 class="text-base font-medium mb-3 group-hover:text-violet-400 transition-colors text-zinc-100">OCT for Retinal Disease Classification</h4>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">Machine Learning</span>
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">Python</span>
+                            <span class="px-2.5 py-1 text-xs font-light rounded-md bg-violet-500/10 border border-violet-500/20 text-violet-400">Docker</span>
+                        </div>
+                        <p class="text-sm leading-relaxed font-light text-zinc-400">Developed a federated ML system achieving 93% accuracy on 50,000+ samples via hyperparameter tuning and data augmentation. Containerized pipeline with Docker for scalable deployment, reducing training time by 40%.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Accordion -->
+            <section class="mb-16">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight mb-8 font-['Geist',sans-serif] text-zinc-100 animate-words">Frequently Asked Questions</h3>
+                <div class="space-y-3" id="faq-container">
+                    
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 overflow-hidden transition-colors hover:border-zinc-700">
+                        <button class="w-full px-6 py-4 flex justify-between items-center text-left faq-trigger focus:outline-none">
+                            <span class="text-sm font-medium text-zinc-200">What services do you offer?</span>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-zinc-500 transition-transform duration-300 transform"></iconify-icon>
+                        </button>
+                        <div class="faq-content overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-in-out;">
+                            <div class="px-6 pb-5 text-sm font-light text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                                I specialize in software engineering, data pipeline architecture, building immersive VR/AR simulations, and integrating robust machine learning models into scalable systems.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 overflow-hidden transition-colors hover:border-zinc-700">
+                        <button class="w-full px-6 py-4 flex justify-between items-center text-left faq-trigger focus:outline-none">
+                            <span class="text-sm font-medium text-zinc-200">What technologies do you specialize in?</span>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-zinc-500 transition-transform duration-300 transform"></iconify-icon>
+                        </button>
+                        <div class="faq-content overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-in-out;">
+                            <div class="px-6 pb-5 text-sm font-light text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                                My primary stack includes Python, C#, Unity3D, and Django. I also work frequently with tools like Apache Spark, Docker, Kafka, and data visualization platforms like PowerBI.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 overflow-hidden transition-colors hover:border-zinc-700">
+                        <button class="w-full px-6 py-4 flex justify-between items-center text-left faq-trigger focus:outline-none">
+                            <span class="text-sm font-medium text-zinc-200">What industries have you worked in?</span>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-zinc-500 transition-transform duration-300 transform"></iconify-icon>
+                        </button>
+                        <div class="faq-content overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-in-out;">
+                            <div class="px-6 pb-5 text-sm font-light text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                                I have contributed to academia/research (bioinformatics &amp; healthcare), aerospace &amp; drone simulations (VR), and enterprise software development (hotel aggregation &amp; IoT healthcare devices).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 overflow-hidden transition-colors hover:border-zinc-700">
+                        <button class="w-full px-6 py-4 flex justify-between items-center text-left faq-trigger focus:outline-none">
+                            <span class="text-sm font-medium text-zinc-200">What is your approach to projects?</span>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-zinc-500 transition-transform duration-300 transform"></iconify-icon>
+                        </button>
+                        <div class="faq-content overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-in-out;">
+                            <div class="px-6 pb-5 text-sm font-light text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                                I focus on delivering scalable, data-driven solutions. I emphasize strong architectural planning, continuous testing, and ensuring the end product drastically reduces manual effort or real-world testing costs.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 overflow-hidden transition-colors hover:border-zinc-700">
+                        <button class="w-full px-6 py-4 flex justify-between items-center text-left faq-trigger focus:outline-none">
+                            <span class="text-sm font-medium text-zinc-200">Are you available for new opportunities?</span>
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="text-zinc-500 transition-transform duration-300 transform"></iconify-icon>
+                        </button>
+                        <div class="faq-content overflow-hidden" style="max-height: 0px; transition: max-height 0.3s ease-in-out;">
+                            <div class="px-6 pb-5 text-sm font-light text-zinc-400 leading-relaxed border-t border-zinc-800/50 pt-3">
+                                Yes, I am actively seeking software engineering and data engineering opportunities. Feel free to use the contact form below or email me directly to discuss collaborations.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mb-4">
+                <h3 class="text-2xl md:text-3xl font-normal tracking-tight mb-8 font-['Geist',sans-serif] text-zinc-100 animate-words">Contact Me</h3>
+                <div class="border border-zinc-800 rounded-2xl bg-zinc-900/40 p-6 md:p-8 max-w-3xl">
+                    <form id="contact-form" class="space-y-5">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div class="space-y-1.5">
+                                <label for="fname" class="text-xs font-medium text-zinc-400 ml-1">First Name</label>
+                                <input type="text" id="fname" class="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50 transition-all" placeholder="John" required="">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label for="lname" class="text-xs font-medium text-zinc-400 ml-1">Last Name</label>
+                                <input type="text" id="lname" class="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50 transition-all" placeholder="Doe" required="">
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-1.5">
+                            <label for="email" class="text-xs font-medium text-zinc-400 ml-1">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50 transition-all" placeholder="john@example.com" required="">
+                            <span id="email-error" class="hidden text-xs text-red-400 ml-1 mt-1">Please enter a valid email address.</span>
+                        </div>
+                        
+                        <div class="space-y-1.5">
+                            <label for="message" class="text-xs font-medium text-zinc-400 ml-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-zinc-900/50 border border-zinc-700 rounded-xl px-4 py-3 text-sm text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50 transition-all resize-none" placeholder="How can we collaborate?" required=""></textarea>
+                        </div>
+                        
+                        <div class="pt-2 flex items-center justify-between">
+                            <button type="submit" id="submit-btn" class="px-6 py-2.5 bg-zinc-100 text-zinc-900 text-sm font-medium rounded-xl hover:bg-white transition-colors flex items-center justify-center min-w-[140px] disabled:opacity-50 disabled:cursor-not-allowed">
+                                Send Message
+                            </button>
+                            <span id="form-success" class="hidden text-sm text-emerald-400 flex items-center gap-2">
+                                <iconify-icon icon="solar:check-circle-linear" class="text-lg"></iconify-icon> Message Sent
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // --- Word Animation ---
+            const elements = document.querySelectorAll('.animate-words');
+            elements.forEach(el => {
+                const text = el.innerText;
+                const htmlContent = el.innerHTML;
+                
+                // Only animate text nodes if there are no complex child elements
+                if(el.children.length === 0 || text === htmlContent) {
+                    el.innerHTML = '';
+                    el.classList.add('word-animate-container');
+                    text.split(' ').forEach((word, index) => {
+                        if(word.trim() === '') return;
+                        const span = document.createElement('span');
+                        span.style.animationDelay = `${index * 0.08}s`;
+                        span.innerText = word + '\u00A0';
+                        el.appendChild(span);
+                    });
+                }
+            });
+
+            // --- AI Chat Logic ---
+            const chatInput = document.getElementById('chat-input');
+            const chatSubmit = document.getElementById('chat-submit');
+            const chatWindow = document.getElementById('chat-window');
+            const chatForm = document.getElementById('chat-form');
+
+            // Auto-resize textarea
+            chatInput.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+                chatSubmit.disabled = this.value.trim() === '';
+            });
+
+            // Submit on Enter (prevent default to avoid new line unless Shift+Enter)
+            chatInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    if(!chatSubmit.disabled) chatForm.dispatchEvent(new Event('submit'));
+                }
+            });
+
+            // Chatbot Knowledge Base
+            const knowledgeBase = [
+                { keys: ["education", "degree", "university", "college", "gpa", "study"], 
+                  res: "I am currently pursuing a Master's in Computer Science at Iowa State University (Expected 2026). Prior to this, I completed my Bachelor of Engineering in CSE from Vidyavardhaka College with a 3.7 GPA in 2023." },
+                { keys: ["experience", "work", "job", "intern", "holoworld", "bridge", "skanray", "research"], 
+                  res: "I've worked as a Graduate Research Assistant at Iowa State, an SDE at HoloWorld building VR simulations, a WebDev Intern at Bridge Labs, and a Research Intern at IIT Kanpur. Would you like to know more about a specific role?" },
+                { keys: ["project", "f1", "telemetry", "oct", "retinal", "ml"], 
+                  res: "Some of my featured projects include an F1 Telemetry Analysis pipeline using Python and FastF1, and a Federated Machine Learning system for Retinal Disease Classification utilizing Docker and deep learning. Check out the Projects section below for details!" },
+                { keys: ["skill", "tool", "language", "technology", "stack", "python", "c#", "unity"], 
+                  res: "My core languages include Python, C#, Kotlin, and Bash. I specialize in Unity3D for VR, Django for web, and tools like Docker, Apache Spark, Kafka, and Firebase." },
+                { keys: ["service", "offer", "hire", "freelance"], 
+                  res: "I offer software engineering services including data pipeline architecture, VR/AR simulation development, machine learning model integration, and robust backend development." },
+                { keys: ["contact", "email", "phone", "reach", "hire"], 
+                  res: "You can reach me at kunalsuresh25@gmail.com, call me at (+1) 415 815 6904, or use the contact form at the bottom of this page." },
+                { keys: ["hello", "hi", "hey", "greetings"], 
+                  res: "Hello! I'm an AI assistant trained on Kunal's portfolio. Feel free to ask me anything about his professional background." },
+                { keys: ["who", "kunal", "about"], 
+                  res: "Kunal Suresh is a Software Engineer specializing in Python, C#, and Unity3D. He builds immersive VR simulations, scalable data pipelines, and robust machine learning systems." }
+            ];
+
+            const addMessage = (text, isUser) => {
+                const msgDiv = document.createElement('div');
+                msgDiv.className = `flex w-full gap-3 md:gap-4 chat-message-animate ${isUser ? 'flex-row-reverse' : ''}`;
+                
+                const avatar = isUser 
+                    ? `<div class="w-8 h-8 rounded-full border border-zinc-700 bg-zinc-800 flex items-center justify-center shrink-0">
+                           <iconify-icon icon="solar:user-rounded-linear" class="text-zinc-400"></iconify-icon>
+                       </div>`
+                    : `<div class="w-8 h-8 rounded-full border border-violet-500/30 bg-violet-500/10 flex items-center justify-center shrink-0">
+                           <iconify-icon icon="solar:smart-speaker-minimalistic-linear" class="text-violet-400"></iconify-icon>
+                       </div>`;
+
+                const contentClass = isUser ? 'items-end' : 'items-start';
+                const textClass = isUser ? 'bg-zinc-800 text-zinc-100 rounded-2xl rounded-tr-sm px-4 py-2.5' : 'text-zinc-300';
+
+                msgDiv.innerHTML = `
+                    ${avatar}
+                    <div class="flex flex-col gap-1 w-full max-w-[85%] ${contentClass}">
+                        ${!isUser ? '<span class="text-xs font-medium text-zinc-500">AI Assistant</span>' : ''}
+                        <p class="text-sm leading-relaxed ${textClass}">${text}</p>
+                    </div>
+                `;
+                
+                chatWindow.appendChild(msgDiv);
+                chatWindow.scrollTo({ top: chatWindow.scrollHeight, behavior: 'smooth' });
+            };
+
+            const addTypingIndicator = () => {
+                const div = document.createElement('div');
+                div.id = 'typing-indicator';
+                div.className = `flex w-full gap-3 md:gap-4 chat-message-animate`;
+                div.innerHTML = `
+                    <div class="w-8 h-8 rounded-full border border-violet-500/30 bg-violet-500/10 flex items-center justify-center shrink-0">
+                        <iconify-icon icon="solar:smart-speaker-minimalistic-linear" class="text-violet-400"></iconify-icon>
+                    </div>
+                    <div class="flex flex-col gap-1 w-full max-w-[85%] items-start justify-center pt-2">
+                        <div class="flex gap-1.5 items-center">
+                            <div class="w-1.5 h-1.5 bg-zinc-500 rounded-full typing-dot"></div>
+                            <div class="w-1.5 h-1.5 bg-zinc-500 rounded-full typing-dot"></div>
+                            <div class="w-1.5 h-1.5 bg-zinc-500 rounded-full typing-dot"></div>
+                        </div>
+                    </div>
+                `;
+                chatWindow.appendChild(div);
+                chatWindow.scrollTo({ top: chatWindow.scrollHeight, behavior: 'smooth' });
+            };
+
+            const removeTypingIndicator = () => {
+                const el = document.getElementById('typing-indicator');
+                if(el) el.remove();
+            };
+
+            const getBotResponse = (input) => {
+                const words = input.toLowerCase().replace(/[^\w\s]/gi, '').split(' ');
+                let bestMatch = null;
+                let maxScore = 0;
+
+                knowledgeBase.forEach(rule => {
+                    let score = 0;
+                    rule.keys.forEach(key => {
+                        if(words.includes(key) || input.toLowerCase().includes(key)) score++;
+                    });
+                    if(score > maxScore) {
+                        maxScore = score;
+                        bestMatch = rule.res;
+                    }
+                });
+
+                return bestMatch || "I don't see that information listed here, but feel free to contact me directly using the form below or via email.";
+            };
+
+            chatForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const text = chatInput.value.trim();
+                if(!text) return;
+
+                // User Message
+                addMessage(text, true);
+                chatInput.value = '';
+                chatInput.style.height = 'auto';
+                chatSubmit.disabled = true;
+
+                // Bot Response Animation
+                addTypingIndicator();
+                
+                setTimeout(() => {
+                    removeTypingIndicator();
+                    const response = getBotResponse(text);
+                    addMessage(response, false);
+                }, 1000 + Math.random() * 800); // 1-1.8s delay
+            });
+
+            // --- FAQ Accordion Logic ---
+            const triggers = document.querySelectorAll('.faq-trigger');
+            triggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const content = trigger.nextElementSibling;
+                    const icon = trigger.querySelector('iconify-icon');
+                    const isOpen = content.style.maxHeight !== '0px';
+
+                    // Close all
+                    document.querySelectorAll('.faq-content').forEach(c => c.style.maxHeight = '0px');
+                    document.querySelectorAll('.faq-trigger iconify-icon').forEach(i => i.style.transform = 'rotate(0deg)');
+
+                    // Open target if was closed
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+
+            // --- Contact Form Validation ---
+            const contactForm = document.getElementById('contact-form');
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('email-error');
+            const submitBtn = document.getElementById('submit-btn');
+            const formSuccess = document.getElementById('form-success');
+
+            const validateEmail = (email) => {
+                return String(email).toLowerCase().match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+            };
+
+            emailInput.addEventListener('input', () => {
+                if(emailInput.value.length > 0 && !validateEmail(emailInput.value)) {
+                    emailError.classList.remove('hidden');
+                    emailInput.classList.add('border-red-500/50', 'focus:border-red-500/50', 'focus:ring-red-500/50');
+                } else {
+                    emailError.classList.add('hidden');
+                    emailInput.classList.remove('border-red-500/50', 'focus:border-red-500/50', 'focus:ring-red-500/50');
+                }
+            });
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                if(!validateEmail(emailInput.value)) {
+                    emailInput.focus();
+                    return;
+                }
+
+                // Simulate sending
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<iconify-icon icon="solar:spinner-linear" class="animate-spin text-lg"></iconify-icon> Sending...';
+
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Send Message';
+                    formSuccess.classList.remove('hidden');
+                    
+                    setTimeout(() => {
+                        formSuccess.classList.add('hidden');
+                    }, 4000);
+                }, 1500);
+            });
+
+        });
+    </script>
+
+
+</body></html>
